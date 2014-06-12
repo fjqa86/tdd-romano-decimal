@@ -20,5 +20,21 @@ public class RomanoDecimalTest {
 		String resultado = romano.convertirDecimal(numeroPrueba);
 		Assert.assertEquals("I", resultado);	
 	}
+	
+	@Test
+	public void twoRoman() {
+		String numeroPrueba = "2";
+		RomanoDecimal romano = new RomanoDecimal();
+		String resultado = romano.convertirDecimal(numeroPrueba);
+		Assert.assertEquals("II", resultado);	
+	}
+	
+	@Test
+	public void threeRoman() {
+		String numeroPrueba = "3";
+		RomanoDecimal romano = new RomanoDecimal();
+		String resultado = romano.convertirDecimal(numeroPrueba);
+		Assert.assertEquals("III", resultado);	
+	}
 
 }
