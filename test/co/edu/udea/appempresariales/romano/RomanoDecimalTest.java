@@ -127,4 +127,43 @@ public class RomanoDecimalTest {
 		String resultado = romano.convertirDecimal(numeroPrueba);
 		Assert.assertEquals("XX", resultado);	
 	}
+	
+	@Test
+	public void veintiseisRoman() {
+		String numeroPrueba = "26";
+		RomanoDecimal romano = new RomanoDecimal();
+		String resultado = romano.convertirDecimal(numeroPrueba);
+		Assert.assertEquals("XXVI", resultado);	
+	}
+	
+	@Test
+	public void treintaRoman() {
+		String numeroPrueba = "30";
+		RomanoDecimal romano = new RomanoDecimal();
+		String resultado = romano.convertirDecimal(numeroPrueba);
+		Assert.assertEquals("XXX", resultado);	
+	}
+	
+	@Test
+	public void cuarentaytresRoman() {
+		String numeroPrueba = "43";
+		RomanoDecimal romano = new RomanoDecimal();
+		String resultado = romano.convertirDecimal(numeroPrueba);
+		Assert.assertEquals("XLIII", resultado);	
+	}
+	
+	@Test
+	public void cincuentaRoman() {
+		String numeroPrueba = "50";
+		RomanoDecimal romano = new RomanoDecimal();
+		String resultado = romano.convertirDecimal(numeroPrueba);
+		Assert.assertEquals("L", resultado);	
+	}
+	
+	public void ochentaytresRoman() {
+		String numeroPrueba = "83";
+		RomanoDecimal romano = new RomanoDecimal();
+		String resultado = romano.convertirDecimal(numeroPrueba);
+		Assert.assertEquals("LXXXIII", resultado);	
+	}
 }
