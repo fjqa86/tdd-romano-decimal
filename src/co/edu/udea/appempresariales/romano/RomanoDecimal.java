@@ -17,7 +17,7 @@ public class RomanoDecimal {
 					resultado=resultado+romano[i];
 					numero = numero - decimal[i];
 					if (numero <= decimal[i]){
-						i=0;
+						i=-1;
 						continue;
 					}else{	
 						if (numero > decimal[i]){
@@ -25,7 +25,7 @@ public class RomanoDecimal {
 							if (numero < 2*decimal[i]){
 								resultado=resultado+romano[i];
 							}
-							i=0;
+							i=-1;
 							continue;
 						}
 						break;

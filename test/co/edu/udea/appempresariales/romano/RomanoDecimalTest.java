@@ -192,4 +192,20 @@ public class RomanoDecimalTest {
 		Assert.assertEquals("CMXXXVI", resultado);	
 	}
 	
+	@Test
+	public void tresMilRoman() {
+		String numeroPrueba = "3000";
+		RomanoDecimal romano = new RomanoDecimal();
+		String resultado = romano.convertirDecimal(numeroPrueba);
+		Assert.assertEquals("MMM", resultado);	
+	}
+	
+	@Test
+	public void finalRoman() {
+		String numeroPrueba = "3998";
+		RomanoDecimal romano = new RomanoDecimal();
+		String resultado = romano.convertirDecimal(numeroPrueba);
+		Assert.assertEquals("MMMCMXCVIII", resultado);	
+	}
+	
 }
