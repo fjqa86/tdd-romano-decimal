@@ -160,10 +160,36 @@ public class RomanoDecimalTest {
 		Assert.assertEquals("L", resultado);	
 	}
 	
+	@Test
 	public void ochentaytresRoman() {
 		String numeroPrueba = "83";
 		RomanoDecimal romano = new RomanoDecimal();
 		String resultado = romano.convertirDecimal(numeroPrueba);
 		Assert.assertEquals("LXXXIII", resultado);	
 	}
+	
+	@Test
+	public void cienRoman() {
+		String numeroPrueba = "100";
+		RomanoDecimal romano = new RomanoDecimal();
+		String resultado = romano.convertirDecimal(numeroPrueba);
+		Assert.assertEquals("C", resultado);	
+	}
+	
+	@Test
+	public void quinientosRoman() {
+		String numeroPrueba = "501";
+		RomanoDecimal romano = new RomanoDecimal();
+		String resultado = romano.convertirDecimal(numeroPrueba);
+		Assert.assertEquals("DI", resultado);	
+	}
+	
+	@Test
+	public void novecientosTreintaTresRoman() {
+		String numeroPrueba = "936";
+		RomanoDecimal romano = new RomanoDecimal();
+		String resultado = romano.convertirDecimal(numeroPrueba);
+		Assert.assertEquals("CMXXXVI", resultado);	
+	}
+	
 }
