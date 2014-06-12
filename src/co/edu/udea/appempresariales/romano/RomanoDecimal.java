@@ -22,6 +22,12 @@ public class RomanoDecimal {
 				resultado=resultado+"I";
 			}	
 		}
+		if (numero==9){
+			resultado=resultado+"IX";	
+		}
+		if (numero==10){
+			resultado=resultado+"X";	
+		}
 		return resultado;
 	}
 

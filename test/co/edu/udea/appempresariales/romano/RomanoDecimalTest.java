@@ -71,5 +71,21 @@ public class RomanoDecimalTest {
 		String resultado = romano.convertirDecimal(numeroPrueba);
 		Assert.assertEquals("VIII", resultado);	
 	}
+	
+	@Test
+	public void nineRoman() {
+		String numeroPrueba = "9";
+		RomanoDecimal romano = new RomanoDecimal();
+		String resultado = romano.convertirDecimal(numeroPrueba);
+		Assert.assertEquals("IX", resultado);	
+	}
+	
+	@Test
+	public void tenRoman() {
+		String numeroPrueba = "10";
+		RomanoDecimal romano = new RomanoDecimal();
+		String resultado = romano.convertirDecimal(numeroPrueba);
+		Assert.assertEquals("X", resultado);	
+	}
 
 }
