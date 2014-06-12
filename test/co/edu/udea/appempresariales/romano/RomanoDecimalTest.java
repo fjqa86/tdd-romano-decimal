@@ -87,5 +87,44 @@ public class RomanoDecimalTest {
 		String resultado = romano.convertirDecimal(numeroPrueba);
 		Assert.assertEquals("X", resultado);	
 	}
+	
+	@Test
+	public void quinceRoman() {
+		String numeroPrueba = "15";
+		RomanoDecimal romano = new RomanoDecimal();
+		String resultado = romano.convertirDecimal(numeroPrueba);
+		Assert.assertEquals("XV", resultado);	
+	}
+	
+	@Test
+	public void doceRoman() {
+		String numeroPrueba = "12";
+		RomanoDecimal romano = new RomanoDecimal();
+		String resultado = romano.convertirDecimal(numeroPrueba);
+		Assert.assertEquals("XII", resultado);	
+	}
+	
+	@Test
+	public void dieciochoRoman() {
+		String numeroPrueba = "18";
+		RomanoDecimal romano = new RomanoDecimal();
+		String resultado = romano.convertirDecimal(numeroPrueba);
+		Assert.assertEquals("XVIII", resultado);	
+	}
+	
+	@Test
+	public void diecinuevoRoman() {
+		String numeroPrueba = "19";
+		RomanoDecimal romano = new RomanoDecimal();
+		String resultado = romano.convertirDecimal(numeroPrueba);
+		Assert.assertEquals("XIX", resultado);	
+	}
 
+	@Test
+	public void veinteRoman() {
+		String numeroPrueba = "20";
+		RomanoDecimal romano = new RomanoDecimal();
+		String resultado = romano.convertirDecimal(numeroPrueba);
+		Assert.assertEquals("XX", resultado);	
+	}
 }

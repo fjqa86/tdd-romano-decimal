@@ -3,30 +3,30 @@ package co.edu.udea.appempresariales.romano;
 public class RomanoDecimal {
 
 	public String convertirDecimal(String numeroPrueba) {
+        int[] decimal =   {50 , 40 ,10 , 9 , 5 ,   4 , 1};
+		String[] romano = {"L","LX","X","IX","V", "IV","I" };
+		
 		String resultado="";
 		int numero = Integer.parseInt(numeroPrueba);
-		if (numero<4){
-			for (int i=0;i<numero;i++){
-				resultado=resultado+"I";
-			}			
-		}		
-		if (numero==4){
-			resultado=resultado+"IV";	
-		}
-		if (numero==5){
-			resultado=resultado+"V";	
-		}
-		if (numero>5 && numero < 9) {
-			resultado=resultado+"V";
-			for (int i=0;i<numero-5;i++){
-				resultado=resultado+"I";
-			}	
-		}
-		if (numero==9){
-			resultado=resultado+"IX";	
-		}
-		if (numero==10){
-			resultado=resultado+"X";	
+		for (int i=0;i<decimal.length;i++){
+			if (numero==decimal[i]){
+				resultado=resultado+romano[i];
+				break;
+			}else{
+				if (numero>decimal[i]){
+					resultado=resultado+romano[i];
+					numero = numero - decimal[i];
+					if (numero < decimal[i]){
+						i=0;
+						continue;
+					}else{
+						
+					for (int j=0;j<numero;j++){
+						resultado=resultado+romano[i];
+					}
+					break;}
+				}
+			}		
 		}
 		return resultado;
 	}
