@@ -208,4 +208,39 @@ public class RomanoDecimalTest {
 		Assert.assertEquals("MMMCMXCVIII", resultado);	
 	}
 	
+	// numero cero no existente
+	@Test
+	public void ceroRoman() {
+		String numeroPrueba = "0";
+		RomanoDecimal romano = new RomanoDecimal();
+		String resultado = romano.convertirDecimal(numeroPrueba);
+		Assert.assertEquals("", resultado);	
+	}
+	
+	// no es un numero
+	@Test
+	public void noNumeroRoman() {
+		String numeroPrueba = "2a";
+		RomanoDecimal romano = new RomanoDecimal();
+		String resultado = romano.convertirDecimal(numeroPrueba);
+		Assert.assertEquals("", resultado);	
+	}
+	
+	// Numeros negativos
+	@Test
+	public void numeroNegativoRoman() {
+		String numeroPrueba = "-2";
+		RomanoDecimal romano = new RomanoDecimal();
+		String resultado = romano.convertirDecimal(numeroPrueba);
+		Assert.assertEquals("", resultado);	
+	}
+	
+	// no es un numero
+	@Test
+	public void techoRoman() {
+		String numeroPrueba = "4000";
+		RomanoDecimal romano = new RomanoDecimal();
+		String resultado = romano.convertirDecimal(numeroPrueba);
+		Assert.assertEquals("", resultado);	
+	}
 }
